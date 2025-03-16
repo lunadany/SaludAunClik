@@ -1,0 +1,236 @@
+/* Contenedor principal */
+.container0 {
+  display: flex;
+  flex-direction: column; /* Apila los elementos en columna */
+  width: 830px; /* Tamaño base */
+  max-width: 100%; /* Adaptación a pantallas pequeñas */
+  padding: 0;
+  margin: 0 auto; /* Centra el contenedor */
+  background-color: #eaf6fc; /* Fondo elegante y ligero */
+  border: 5px solid #40c5ea;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Sombras suaves */
+  overflow: hidden;
+  margin-top: -15px;
+}
+
+/* Sección del formulario */
+.form-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* Diseño de grid para el formulario */
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adaptable a tamaños pequeños */
+  gap: 15px; /* Espaciado entre los campos */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #007bff; /* Azul odontológico */
+  font-weight: bold;
+}
+
+input,textarea {
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,textarea:focus {
+  border-color: #007bff; /* Resalta al enfocarse */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+textarea {
+  resize: none;
+  height: 60px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Imagen */
+.imagen5 {
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto 0 auto;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto del encabezado */
+.txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #40c5ea;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1rem;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.txt:hover {
+  transform: scale(1.05);
+  background-color: #007bff; /* Más oscuro al pasar el cursor */
+  cursor: pointer;
+}
+
+/* Contenedor de botones */
+.botones-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los botones se adapten a la pantalla */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Estilo individual de los botones */
+.botones-container button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #40c5ea;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botones-container button:hover {
+  background-color: #007bff; /* Azul más vivo */
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Resalta más */
+}
+
+/* Botones de registro */
+.botones-container button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #40c5ea;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  width: auto;
+}
+
+.botones-container button:hover {
+  background-color: #007bff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+  .container0 {
+    width: 95%; /* Ajuste para pantallas pequeñas */
+  }
+
+  .botones-container button {
+    width: 70px;
+    height: 70px;
+    font-size: 1.2rem; /* Botones más pequeños */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .txt {
+    font-size: 1.2rem; /* Texto más pequeño */
+    padding: 15px;
+  }
+
+  .grid-form {
+    grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+  }
+}
+/* Estilo para el modal flotante */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.regreso {
+  color: white;
+  cursor: pointer;
+  background-color: #00BCD4;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  position: absolute; /* O usa fixed si quieres que siempre esté visible */
+  right: 50px; /* Ajusta según necesites */
+  top: 10px; /* Opcional: para posicionarlo en la parte superior */
+}
+
+.boton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}

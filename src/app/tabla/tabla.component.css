@@ -1,0 +1,201 @@
+.dentista{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: aqua;
+}
+/* Define el contenedor principal que agrupa todos los elementos */
+.linea {
+    display: flex; /* Establece el modelo de caja flexbox para alinear los elementos en línea */
+    justify-content: space-between; /* Distribuye los elementos de manera uniforme, con espacio entre ellos */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    padding: 20px; /* Añade espacio alrededor de los elementos dentro del contenedor */
+    background-color: #f9f9f9; /* Define un color de fondo claro para el contenedor */
+    border-radius: 8px; /* Redondea las esquinas del contenedor */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra suave alrededor del contenedor para darle profundidad */
+  }
+  
+  /* Estilo de los elementos de texto dentro del contenedor */
+  .linea p {
+    font-size: 16px; /* Define el tamaño de la fuente para los párrafos */
+    color: #333; /* Establece el color del texto a un tono oscuro para asegurar legibilidad */
+    margin: 0; /* Elimina el margen por defecto de los párrafos */
+    padding: 5px; /* Añade un poco de espacio alrededor del texto */
+    text-align: center; /* Centra el texto dentro de los párrafos */
+  }
+  
+  /* Estilo de los iconos SVG */
+  .linea svg {
+    width: 24px; /* Define el tamaño del icono SVG a 24px de ancho */
+    height: 24px; /* Define el tamaño del icono SVG a 24px de alto */
+    fill: #007BFF; /* Asigna un color azul brillante al ícono */
+    transition: transform 0.3s ease, fill 0.3s ease; /* Aplica una transición suave cuando el ícono cambie de tamaño o color */
+    margin: 0 10px; /* Añade espacio de 10px a la izquierda y derecha del ícono */
+  }
+  
+  /* Efecto visual cuando el mouse pasa sobre los iconos SVG */
+  .linea svg:hover {
+    transform: scale(1.2); /* Aumenta el tamaño del ícono en un 20% */
+    fill: #FF5722; /* Cambia el color del ícono a un tono anaranjado cuando se pasa el mouse */
+  }
+  
+  /* Efecto visual cuando el mouse pasa sobre los párrafos */
+  .linea p:hover {
+    color: #007BFF; /* Cambia el color del texto a azul brillante cuando el mouse pasa por encima */
+  }
+  
+  /* Estilo para el último párrafo, el que contiene el horario */
+  .linea p:last-child {
+    font-size: 14px; /* Reduce el tamaño de la fuente para el texto del horario */
+    color: #666; /* Cambia el color del texto a gris oscuro para el horario */
+  }
+  
+  /* Aumenta la intensidad del texto cuando se pasa el mouse sobre el ícono correspondiente */
+  .linea svg:hover + p {
+    font-weight: bold; /* Pone en negrita el texto del párrafo que sigue al ícono al pasar el mouse sobre el ícono */
+  }
+  
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* botom modificar */
+.btn-72,
+.btn-72 *,
+.btn-72 :after,
+.btn-72 :before,
+.btn-72:after,
+.btn-72:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-72 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fffefe;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #54cef0);
+  padding: 0;
+}
+.btn-72:disabled {
+  cursor: default;
+}
+.btn-72:-moz-focusring {
+  outline: auto;
+}
+.btn-72 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-72 [hidden] {
+  display: none;
+}
+.btn-72 {
+  background: #66f385;
+  border-radius: 999px;
+  box-shadow: 5px 5px 10px #cee3f2, -5px -5px 10px #faffff;
+  box-sizing: border-box;
+  color: #0ea5e9;
+  display: block;
+  font-weight: 900;
+  -webkit-mask-image: none;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+.btn-72:active {
+  box-shadow: inset 5px 5px 10px #cee3f2, inset -5px -5px 10px #faffff;
+}
+/* fin     ///////////////////////////////////////////////////////////// */
+.regreso {
+  color: white;
+  cursor: pointer;
+  background-color: #00BCD4;
+  border: none;
+  padding: 1px 5px;
+  border-radius: 8px;
+  position: absolute; /* O usa fixed si quieres que siempre esté visible */
+  /* right: 50px; Ajusta según necesites */
+  left: 2%;
+  top: 1px; /* Opcional: para posicionarlo en la parte superior */
+}
+
+.boton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Estilo general de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezados de la tabla */
+th {
+  background-color: #2a9df4; /* Azul profesional */
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Filas de la tabla */
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternar colores de las filas para mejor lectura */
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Efecto hover para resaltar fila */
+tbody tr:hover {
+  background-color: #d7ebff;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Mensaje cuando no hay datos */
+p {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}

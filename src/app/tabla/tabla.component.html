@@ -1,0 +1,65 @@
+<div class="dentista">
+    <h3>CentralDent</h3>
+    <a href="http://localhost:4200/bienvenida">
+        <button type="button" class="regreso" aria-label="Back">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-reply-all-fill" viewBox="0 0 16 16">
+              <path d="M8.021 11.9 3.453 8.62a.72.72 0 0 1 0-1.238L8.021 4.1a.716.716 0 0 1 1.079.619V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+              <path d="M5.232 4.293a.5.5 0 0 1-.106.7L1.114 7.945l-.042.028a.147.147 0 0 0 0 .252l.042.028 4.012 2.954a.5.5 0 1 1-.593.805L.539 9.073a1.147 1.147 0 0 1 0-1.946l3.994-2.94a.5.5 0 0 1 .699.106"/>
+            </svg>
+      </button>
+      </a>
+</div>
+
+<div class="linea">
+    <div>
+        <p>Teléfono: <a href="tel:+5222212266924">22212266924</a></p>
+        <a href="tel:+5222212266924">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+            </svg>
+        </a>
+    </div>
+
+
+
+<div class="direccion">
+    <p>Ubicación</p>
+    <a href="https://maps.app.goo.gl/NEPngomTRFruWef3A" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-pin-angle" viewBox="0 0 16 16">
+            <path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a6 6 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707s.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a6 6 0 0 1 1.013.16l3.134-3.133a3 3 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146m.122 2.112v-.002zm0-.002v.002a.5.5 0 0 1-.122.51L6.293 6.878a.5.5 0 0 1-.511.12H5.78l-.014-.004a5 5 0 0 0-.288-.076 5 5 0 0 0-.765-.116c-.422-.028-.836.008-1.175.15l5.51 5.509c.141-.34.177-.753.149-1.175a5 5 0 0 0-.192-1.054l-.004-.013v-.001a.5.5 0 0 1 .12-.512l3.536-3.535a.5.5 0 0 1 .532-.115l.096.022c.087.017.208.034.344.034q.172.002.343-.04L9.927 2.028q-.042.172-.04.343a1.8 1.8 0 0 0 .062.46z"/>
+        </svg>
+    </a>
+</div>
+
+
+    <p>Horario: Lunes a Viernes de 9am a 7pm y Sábado a Domingo de 9am a 2pm</p>
+
+    <a href="/modificar">
+        <button class="btn-72">Modificar Cita</button>
+    </a>
+</div>
+
+<h2>Lista de Usuarios</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido Paterno</th>
+      <th>Apellido Materno</th>
+      <th>Dia de cita</th>
+      <th>Hora de cita</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of data">
+      <td>{{ usuario.nombre }}</td>
+      <td>{{ usuario.apellidoPaterno }}</td>
+      <td>{{ usuario.apellidoMaterno }}</td>
+        <td>{{ usuario.diaCita }}</td>
+      <td>{{ usuario.horaCita}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Mostrar mensaje si no hay datos -->
+<p *ngIf="data.length === 0">No hay datos disponibles.</p>

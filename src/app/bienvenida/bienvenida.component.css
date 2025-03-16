@@ -1,0 +1,228 @@
+/* Título principal centrado */
+.titulo-principal {
+  font-size: 4rem; /* Tamaño grande por defecto */
+  text-align: left; /* Centrado */
+  padding-left: 0; /* Sin margen izquierdo en pantallas pequeñas */
+  color: rgb(0, 145, 255);
+}
+
+@media (max-width: 500px) {
+  .titulo-principal {
+    font-size: 2.0rem; /* Tamaño más pequeño en pantallas pequeñas */
+    padding-left: 0; /* Asegura que no haya margen */
+  }
+}
+.diente {
+  position: absolute;
+  top: 1%;
+  right: 22.5%; /* Mueve la imagen a la derecha */
+  z-index: -1;
+} /* Contenedor principal */
+.contenido {
+  margin-top: 20px; /* Espacio encima del contenido */
+
+} /* Imagen */
+.img1 img {
+  max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+  height: auto; /* Mantiene las proporciones de la imagen */
+}
+
+.diente {
+  width: 10%; /* Reduzca el tamaño en pantallas más grandes */
+  height: 15%; /* Mantiene la proporción */
+}
+
+@media (max-width: 768px) {
+  .diente {
+    width: 30%; /* En pantallas pequeñas, la imagen se ajusta más */
+  }
+} /* Botón */
+button#buscarBtn {
+  background-color: #007bff; /* Color azul */
+  border: none; /* Sin bordes */
+  color: white; /* Texto en blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1.2rem; /* Tamaño del texto */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Animación de transición */
+  left: 5%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.img2 {
+  height: 10%; /* Tamaño responsivo */
+  width: 10%;  /* Tamaño responsivo */
+  position: absolute; /* Para posicionarlas en esquinas */
+}
+.top-left {
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 45%;
+  z-index: -1; /* Enviar las imágenes al fondo */
+}
+.top-right {
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 45%;
+  z-index: -1; /* Enviar las imágenes al fondo */
+}
+.bottom-left {
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  height: 45%;
+  z-index: -1; /* Enviar las imágenes al fondo */
+  background-color: rgb(252, 252, 252);
+  color: antiquewhite;
+}
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  width: 20%;
+  height: 45%;
+  z-index: -1; /* Enviar las imágenes al fondo */
+}
+button#buscarBtn:hover {
+  background-color: #00b357; /* Azul más oscuro al pasar el cursor */
+}
+.col-md-6{
+  display: block;
+  justify-content: center;
+  align-items: center;
+} /* Tamaño y estilo del texto */
+.text {
+  font-size: 2rem; /* Ajusta el tamaño del texto */
+  font-weight: bold; /* Asegura que las letras sean gruesas para resaltar el efecto */
+  text-transform: uppercase; /* Convierte el texto en mayúsculas */
+  text-align: center; /* Centra el texto */
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+  background-size: 300%; /* Ampliar el fondo para el efecto */
+  -webkit-background-clip: text; /* Muestra el fondo solo en el texto (WebKit) */
+  -webkit-text-fill-color: transparent; /* Hace el texto transparente */
+  animation: slide-colors 3s linear infinite; /* Anima el deslizamiento */
+  justify-content: center;
+  margin-top: -100px; /* Añade espacio entre el botón y el texto */
+} /* Ajustar el texto, botón y párrafo al centro de su columna */
+.btn-76,
+.btn-76 *,
+.btn-76 :after,
+.btn-76 :before,
+.btn-76:after,
+.btn-76:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-76 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,  Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0 auto; /* Centra el botón horizontalmente */
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centrar contenido */
+  align-items: center;
+}
+.btn-76:disabled {
+  cursor: default;
+}
+.btn-76:-moz-focusring {
+  outline: auto;
+}
+.btn-76 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-76 [hidden] {
+  display: none;
+}
+.btn-76 {
+  --neon: #0ea5e9;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  -webkit-mask-image: none;
+  outline: 4px solid #fff;
+  outline-offset: -4px;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: 0.2s linear 0.1s;
+}
+.btn-76:hover {
+  background: var(--neon);
+  box-shadow: 0 0 5px var(--neon), 0 0 25px var(--neon), 0 0 50px var(--neon),
+    0 0 100px var(--neon);
+  color: #fff;
+  outline-color: transparent;
+  transition: 0.2s linear 0.6s;
+}
+.btn-76 span {
+  display: block;
+  inset: 0;
+  position: absolute;
+}
+.btn-76 .top {
+  border-top: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateX(calc(-100% + var(--progress, 0%)));
+  transition: none;
+}
+.btn-76:hover .top {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear;
+}
+.btn-76 .right {
+  border-right: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateY(calc(-100% + var(--progress, 0%)));
+  transition: none;
+}
+.btn-76:hover .right {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.2s;
+}
+.btn-76 .bottom {
+  border-bottom: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateX(calc(100% - var(--progress, 0%)));
+  transition: none;
+}
+.btn-76:hover .bottom {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.4s;
+}
+.btn-76 .left {
+  border-left: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateY(calc(100% - var(--progress, 0%)));
+  transition: none;
+}
+.btn-76:hover .left {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.6s;
+}
+/* Ajuste adicional para mejorar la responsividad */
+@media (max-width: 768px) {
+  .btn-76 {
+    padding: 1rem 2rem; /* Reducir el tamaño en pantallas pequeñas */
+  }
+}

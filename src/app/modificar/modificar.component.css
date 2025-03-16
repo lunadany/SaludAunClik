@@ -1,0 +1,278 @@
+.dentista{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: aqua;
+}
+/* Contenedor de botones con colores más vibrantes y efectos interactivos */
+.contenedor-botones {
+    display: flex;
+    flex-direction: row; /* Alinea los botones en fila (horizontalmente) */
+    align-items: center; /* Centra los botones verticalmente */
+    justify-content: center; /* Opcional: Centra los botones horizontalmente */
+    gap: 20px; /* Espacio entre botones */
+    padding: 20px;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    background: linear-gradient(105deg, #00c6ff, #0072ff); /* Degradado azul vibrante */
+    border-radius: 0px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+   
+}
+/* Botones con colores más llamativos */
+.btn-custom {
+    padding: 14px 22px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ff5722; /* Naranja brillante */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 220px; /* Ancho máximo */
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Efecto de hover en los botones */
+.btn-custom:hover {
+    background-color: #ff1744; /* Rojo vibrante */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* Animación de pulsación al hacer clic */
+.btn-custom:active {
+    transform: scale(0.95);
+}
+/* 📱 Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contenedor-botones {
+        flex-direction: column; /* Acomoda los botones en columna */
+        align-items: center;
+    }
+
+    .btn-custom {
+        width: 80%; /* Hace que los botones ocupen casi toda la pantalla */
+        max-width: 180px; /* Ajusta el tamaño máximo */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-custom {
+        width: 90%; /* Hace que los botones sean más grandes en móviles */
+        max-width: 160px; /* Reduce el tamaño en pantallas muy pequeñas */
+        font-size: 14px; /* Reduce un poco el tamaño del texto */
+        padding: 10px 15px;
+    }
+}
+
+  
+/* Contenedor principal  formulario /////////////////////////////////*/
+/* Contenedor principal del formulario */
+.container0 {
+    display: flex; /* Usa flexbox para organizar los elementos */
+    flex-direction: column; /* Acomoda los elementos en columna */
+    width: 800px; /* Ancho fijo del formulario */
+    max-width: 100%; /* Permite que se adapte a pantallas pequeñas */
+    padding: 0; /* Elimina el espacio interno */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    background-color: #eaf6fc; /* Color de fondo suave */
+    border: 5px solid #40c5ea; /* Borde azul */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0px 4px 12px rgba(0.15, 0, 0, 0.75); /* Sombras suaves */
+    overflow: hidden; /* Evita que el contenido sobresalga */
+    gap: 5px; /* Espaciado entre elementos internos */
+    margin-top: 20px;
+}
+
+/* Sección del formulario */
+.form-section {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 40px 0; /* Se bajó el formulario agregando más margen arriba */
+    margin-top: 40px;
+}
+
+/* Diseño de grid para el formulario */
+.grid-form {
+    display: grid; /* Activa el sistema de grid */
+    grid-template-columns: repeat(3, 1fr); /* Distribuye los elementos en 3 columnas */
+    gap: 15px; /* Espaciado entre los campos */
+}
+
+/* Contenedor para cada campo del formulario */
+.form-group {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Apila elementos dentro de cada grupo */
+}
+
+/* Estilos para las etiquetas (labels) */
+label {
+    font-size: 0.85rem; /* Reduce el tamaño de los labels */
+    margin-bottom: 5px; /* Espacio entre el label y el input */
+    color: #007bff; /* Azul odontológico */
+    font-weight: bold; /* Negrita */
+}
+
+/* Estilos para los inputs y textareas */
+input, textarea {
+    font-size: 1rem; /* Tamaño del texto */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 6px; /* Bordes redondeados */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Efecto de animación */
+}
+
+/* Efecto cuando el input o textarea está enfocado */
+input:focus, textarea:focus {
+    border-color: #007bff; /* Borde azul cuando está seleccionado */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Efecto de sombra */
+}
+
+/* Ajustes específicos para textarea */
+textarea {
+    resize: none; /* Evita que el usuario redimensione el textarea */
+    height: 60px; /* Altura fija */
+}
+
+/* Estilos para el select */
+select {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 8px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño del texto */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 6px; /* Bordes redondeados */
+}
+
+/* Efecto cuando el select está enfocado */
+select:focus {
+    outline: none; /* Elimina el borde predeterminado del navegador */
+    border-color: #007bff; /* Cambia el borde a azul */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Sombra azul */
+}
+
+/* Imagen dentro del formulario */
+.imagen5 {
+    max-width: 100%; /* Ajusta la imagen al contenedor */
+    height: auto; /* Mantiene la proporción */
+    margin: 20px auto 0 auto; /* Centra la imagen y da margen superior */
+    border-radius: 10px; /* Bordes redondeados */
+    display: block; /* Evita espacios adicionales alrededor */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Estilos del texto del encabezado */
+.txt {
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    text-align: center; /* Asegura que el texto esté centrado */
+    background-color: #40c5ea; /* Azul */
+    color: white; /* Texto en blanco */
+    font-family: 'Arial', sans-serif; /* Fuente */
+    font-size: 1.1rem; /* Tamaño del texto */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Efectos al pasar el cursor */
+}
+
+/* Efecto al pasar el cursor sobre el encabezado */
+.txt:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    background-color: #007bff; /* Azul más oscuro */
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+
+/* Estilos para el modal flotante */
+.modal-overlay {
+    position: fixed; /* Fija el modal en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda la pantalla */
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+/* Contenido del modal */
+.modal-content {
+    background: white; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo del spinner de carga */
+.spinner {
+    border: 4px solid #f3f3f3; /* Borde gris */
+    border-top: 4px solid #3498db; /* Azul en la parte superior */
+    border-radius: 50%; /* Forma circular */
+    width: 40px; /* Tamaño */
+    height: 40px;
+    animation: spin 2s linear infinite; /* Animación de giro */
+}
+
+/* Definición de la animación para el spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* Comienza sin rotación */
+    100% { transform: rotate(360deg); } /* Gira 360 grados */
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .grid-form {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid-form {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
+
+/* fin del formulario //////////////////////////////// */
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-contenido {
+    background-color: white;
+    padding: 20px;
+    margin: 20% auto;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .regreso {
+    color: white;
+    cursor: pointer;
+    background-color: #00BCD4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    position: absolute; /* O usa fixed si quieres que siempre esté visible */
+    right: 50px; /* Ajusta según necesites */
+    top: 10px; /* Opcional: para posicionarlo en la parte superior */
+  }
+  
+  .boton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }

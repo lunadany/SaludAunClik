@@ -1,0 +1,100 @@
+<div class="txt">
+    <h1>CentralDent</h1>
+    <a href="http://localhost:4200/tabla">
+        <button type="button" class="regreso" aria-label="Back">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-reply-all-fill" viewBox="0 0 16 16">
+              <path d="M8.021 11.9 3.453 8.62a.72.72 0 0 1 0-1.238L8.021 4.1a.716.716 0 0 1 1.079.619V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+              <path d="M5.232 4.293a.5.5 0 0 1-.106.7L1.114 7.945l-.042.028a.147.147 0 0 0 0 .252l.042.028 4.012 2.954a.5.5 0 1 1-.593.805L.539 9.073a1.147 1.147 0 0 1 0-1.946l3.994-2.94a.5.5 0 0 1 .699.106"/>
+            </svg>
+      </button>
+      </a><br><br>
+
+  </div>
+  <div id="primero">
+    <div class="grid-form">
+      <h4>Ingresa tu correo para que se busquen tus datos</h4>
+      <div class="form-group">
+        <label for="correo">Correo:</label>
+        <input id="correo" type="email" [(ngModel)]="registroVo.correo" name="correo" placeholder="Ingresa tu correo" required  (blur)="obtenerDatosCorreo()"/>
+  </div>
+    <h4>luego puedes modificar tus datos y presionar el boton "modificar tus datos" esto hara que se aguarden los nuevos datos</h4>
+  </div>
+
+  <div class="container0">
+      <div class="form-section">
+         
+              <div class="grid-form">
+                
+
+                  <div class="form-group">
+                      <label for="apellidoPaterno">Apellido paterno:</label>
+                      <input id="apellidoPaterno" type="text" [(ngModel)]="registroVo.apellidoPaterno" name="apellidoPaterno" placeholder="Ingresa tu apellido" required />
+                  </div>
+                  <div class="form-group">
+                      <label for="apellidoMaterno">Apellido materno:</label>
+                      <input id="apellidoMaterno" type="text" [(ngModel)]="registroVo.apellidoMaterno" name="apellidoMaterno" placeholder="Ingresa tu apellido" required />
+                  </div>
+                  <div class="form-group">
+                      <label for="nombre">Nombre:</label>
+                      <input id="nombre" type="text" [(ngModel)]="registroVo.nombre" name="nombre" placeholder="Ingresa tu nombre" required />
+                  </div>
+                  <div class="form-group">
+                      <label for="telefono">Teléfono:</label>
+                      <input id="telefono" type="tel" [(ngModel)]="registroVo.telefono" name="telefono" placeholder="Ingresa tu teléfono" required />
+                  </div>
+                  <div class="form-group">
+                      <label for="motivoAlergias">Alergias conocidas:</label>
+                      <select id="motivoAlergias" [(ngModel)]="registroVo.alergias" name="motivoAlergias" required>
+                          <option value="" disabled selected>Seleccione una opción</option>
+                          <option value="si">Sí</option>
+                          <option value="no">No</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label for="sexo">Sexo:</label>
+                      <select id="sexo" [(ngModel)]="registroVo.sexo" name="sexo" required>
+                          <option value="" disabled selected>Tipo de Sexo</option>
+                          <option value="hombre">Hombre</option>
+                          <option value="mujer">Mujer</option>
+                          <option value="otro">Prefiero no decirlo</option>
+                      </select>
+                  </div>   
+                   <div class="form-group">
+                    <label for="motivoConsulta">Motivo de consulta:</label>
+                    <select id="motivoConsulta" [(ngModel)]="registroVo.motivoConsulta" name="motivoConsulta" (change)="onMotivoChange($event)" required>
+                        <option value="" disabled selected>Selecciona un motivo</option>
+                        <option value="revision" data-tiempo="30">Revisión Dental General</option>
+                        <option value="limpieza" data-tiempo="45">Limpieza Dental (Profilaxis)</option>
+                        <option value="dolor" data-tiempo="60">Consulta por Dolor Dental</option>
+                        <option value="ortodoncia" data-tiempo="40">Ortodoncia (Revisión o Tratamiento de Brackets)</option>
+                        <option value="endodoncia" data-tiempo="90">Endodoncia (Tratamiento de Conductos)</option>
+                        <option value="cirugia" data-tiempo="120">Cirugía Dental (Extracciones)</option>
+                        <option value="implantes" data-tiempo="120">Implantes Dentales</option>
+                        <option value="blanqueamiento" data-tiempo="60">Blanqueamiento Dental</option>
+                        <option value="pediatria" data-tiempo="30">Consulta Infantil</option>
+                        <option value="periodoncia" data-tiempo="60">Tratamiento de Encías (Periodoncia)</option>
+                        <option value="urgencias" data-tiempo="45">Urgencia Dental</option>
+                    </select>
+                </div>
+                  <div class="form-group">
+                      <label for="diadecita">Reservar cita:</label>
+                      <input id="diadecita" type="date" [(ngModel)]="registroVo.diaCita" name="diadecita" required />
+                  </div>
+                  <div class="form-group">
+                      <label for="horario">Hora para su cita:</label>
+                      <input type="time" id="horario" [(ngModel)]="registroVo.horaCita" name="horaCita" [disabled]="!registroVo.diaCita" required />
+                  </div>  
+              </div>  
+      </div>
+    </div>
+    
+    <div class="contenedor-botones">
+        <a href="/registro"><button class="btn-custom">Nueva Cita</button></a>
+       <div class="boton1">
+        <button id="buscarBtn" class="btn-custom" (click)="eliminarDatosModificar();"> Eliminar los Datos </button>
+        </div>
+      
+      <div class="boton1">
+        <button id="buscarBtn" class="btn-custom" (click)="modificarDatosPaciente();"> Modificar tus Datos </button>
+        </div>
+    </div>
