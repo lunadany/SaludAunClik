@@ -9,7 +9,7 @@ import { registroVo } from './pojos/registroVo.modelo';
 export class ModificarService {
 
   // URL base del backend
-  private apiUrl = 'http://192.166.10.108:3000/api/modificar';
+  private apiUrl = 'http://192.166.11.130:3000/api/modificar';
   
   // Constructor con inyección de HttpClient
   constructor(private http: HttpClient) { }

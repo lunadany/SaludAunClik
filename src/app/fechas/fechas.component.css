@@ -1,0 +1,33 @@
+.mantenimiento-titulo {
+  text-align: center;
+  font-size: 36px;
+  color: #d9534f; /* Rojo para indicar algo importante */
+  font-weight: bold;
+  padding: 20px;
+  background-color: #f8d7da; /* Fondo rojo claro */
+  border: 2px solid #d9534f;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.25em;
+  color: #d9534f; /* Color rojo del spinner */
+}
+
+.proceso-texto {
+  font-size: 18px;
+  color: #555;
+  font-weight: bold;
+  margin-top: 10px;
+}

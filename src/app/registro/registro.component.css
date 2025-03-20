@@ -234,3 +234,14 @@ select:focus {
   cursor: pointer;
   padding: 10px;
 }
+.fecha-bloqueada {
+  background-color: #f8d7da;  /* Fondo rojo claro */
+  color: #721c24;             /* Texto rojo */
+}
+
+.alerta {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+

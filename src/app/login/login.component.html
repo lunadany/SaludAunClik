@@ -1,0 +1,82 @@
+<div class="gradient-background">
+    <section class="vh-100">
+      <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100 rounded">
+          <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1 rounded">
+            <div class="text-center">
+              <h2 style="color: rgb(39, 13, 205);">Inicio de sesión para el Especialista</h2>
+              <hr>
+            </div>
+            <form class="row g-3 needs-validation" (ngSubmit)="onSubmit()" novalidate>
+              <div class="form-header">
+                <a href="http://localhost:4200/registro">
+                  <button type="button" class="regreso" aria-label="Back">←</button>
+                </a>
+              </div>
+  
+              <h5 class="tittle rounded">&nbsp;Iniciar Sesión</h5>
+  
+              <!-- Usuario -->
+              <div class="col-md-12">
+                <label for="username" class="form-label">Usuario: <b class="asteriscos">*</b></label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                    </svg>
+                  </span>
+                  <input class="form-control" placeholder="Usuario" id="username" name="username"
+                    [(ngModel)]="username" required>
+                  <div class="invalid-feedback">Campo obligatorio</div>
+                </div>
+              </div>
+  
+              <!-- Contraseña -->
+              <div class="col-md-12">
+                <label for="password" class="form-label">Contraseña: <b class="asteriscos">*</b></label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-lock-fill" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm0 5a1.5 1.5 0 0 1 .5 2.915l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99A1.5 1.5 0 0 1 8 5z"/>
+                    </svg>
+                  </span>
+                  <input [type]="showPassword ? 'text' : 'password'" class="form-control" id="password"
+                  name="password" placeholder="Contraseña" [(ngModel)]="password" required>
+                
+                <button class="btn icon" type="button" (click)="togglePasswordVisibility()">
+                  <!-- Ícono de ojo abierto -->
+                  <svg *ngIf="showPassword" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-eye" viewBox="0 0 16 16">
+                    <path d="M1 8s3-5.5 7-5.5S15 8 15 8s-3 5.5-7 5.5S1 8 1 8"/>
+                    <path d="M8 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6"/>
+                  </svg>
+                
+                  <!-- Ícono de ojo tachado -->
+                  <svg *ngIf="!showPassword" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-eye-slash" viewBox="0 0 16 16">
+                    <path d="M13.359 11.238a7.136 7.136 0 0 0 1.456-2.52h-1.015a6.117 6.117 0 0 1-1.172 1.806"/>
+                    <path d="M6.803 3.091a6.13 6.13 0 0 1 4.949 0l.783-1.338a7.994 7.994 0 0 0-6.515 0"/>
+                  </svg>
+                </button>
+                
+                  <div class="invalid-feedback">Campo obligatorio</div>
+                </div>
+              </div>
+  
+              <!-- Botón de Ingresar -->
+              <div class="col-12 d-grid gap-1 d-md-flex justify-content-md-end align-items-center">
+                <button class="btn create" type="submit">Ingresar</button>
+              </div>
+  
+              <hr>
+              <div class="text-center">
+                <p>Los campos con ( <b class="asteriscos">*</b> ) son obligatorios</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  

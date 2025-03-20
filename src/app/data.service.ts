@@ -10,7 +10,7 @@ import { DatosRegistroService } from './datos-registro.service';
 
 export class DataService {
 
-  private apiUrl = 'http://192.166.10.108:3000/api/tabla'; //trabla
+  private apiUrl = 'http://192.166.11.130:3000/api/tabla'; //trabla
 
   constructor(private http: HttpClient) { }
 

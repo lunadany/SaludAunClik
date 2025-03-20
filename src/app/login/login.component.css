@@ -1,0 +1,25 @@
+.icon {
+    background-color: #3136c4;
+    color: #FFFFFF;
+  }
+  .create {
+    background-color: #17a723;
+    color: #FFFFFF;
+  }
+  .create:hover {
+    background-color: #14901e;
+  }
+  .asteriscos {
+    color: red;
+  }
+
+  .gradient-background {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 20px solid #1e1f1ef0;
+    background-color: rgb(171, 197, 252);
+  }
+  
