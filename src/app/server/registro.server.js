@@ -202,5 +202,5 @@ app.get('/api/tabla', (req, res) => {
 // Iniciar el servidor
 const PORT = 3000;
 app.listen(3000, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+    console.log(`Servidor corriendo en http://salud-a-unclick.com:${PORT}`);
 });
