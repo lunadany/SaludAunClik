@@ -57,7 +57,7 @@ export class LoginComponent {
       confirmButtonText: 'Continuar'
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location.href = 'http://localhost:4200/fechas';
+        window.location.href = 'http://salud-a-un-click.com/fechas';
       }
     });
   }
