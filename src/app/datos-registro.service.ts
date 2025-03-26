@@ -12,7 +12,7 @@ export class DatosRegistroService {
   // }
 
   // Propiedad privada que contiene la URL base del backend.
-  private apiUrl = 'http://192.166.11.130:3000/api/registro'; //registro
+  private apiUrl = 'http://192.168.1.64:3000/api/registro'; //registro
 
   // Constructor que inyecta el servicio HttpClient.
   constructor(private http: HttpClient) { }
